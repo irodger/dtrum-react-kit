@@ -1,6 +1,6 @@
 {
-  "name": "dtrum-react-hooks",
-  "version": "0.0.1",
+  "name": "dtrum-react-kit",
+  "version": "0.0.3",
   "description": "Dynatrace tools and react hooks collection",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
