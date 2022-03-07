@@ -1,0 +1,35 @@
+{
+  "name": "dtrum-react-hooks",
+  "version": "0.0.1",
+  "description": "Dynatrace tools and react hooks collection",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "npm run clean && npx tsc",
+    "test": "jest --maxWorkers 2",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint \"{src,tests}/**/*.{ts,tsx}\"",
+    "lint:fix": "npm run lint --fix",
+    "lint:types": "npx tsc --noEmit",
+    "clean": "rm -rf ./dist"
+  },
+  "keywords": [
+    "react-hook",
+    "dtrum",
+    "dtrum-hooks",
+    "dynatrace",
+    "dtrum-react-hooks",
+    "dtrum-react"
+  ],
+  "author": "irodger <raxennt@gmail.com> (http://irodger.ru)",
+  "license": "MIT",
+  "devDependencies": {
+    "@dynatrace/dtrum-api-types": "^1.233.5",
+    "@types/react": "^17.0.39",
+    "react": "^17.0.2",
+    "typescript": "^4.6.2"
+  },
+  "type": "module"
+}

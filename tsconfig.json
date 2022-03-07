@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "declaration": true,
+    "pretty": true,
+    "rootDir": "src",
+    "sourceMap": false,
+    "strict": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": false,
+    "noFallthroughCasesInSwitch": true,
+    "outDir": "dist",
+    "typeRoots": ["./node_modules/@types", "./node_modules/@dynatrace/"],
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "importHelpers": true,
+    "skipLibCheck": true
+  },
+  "exclude": [
+    "node_modules",
+    "node_modules/*",
+    "dist",
+    "tests",
+    "jest.config.ts",
+    "jest.config.*.ts"
+  ]
+}
