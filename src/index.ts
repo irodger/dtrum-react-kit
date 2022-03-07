@@ -1,7 +1,18 @@
-export { useDtrumEndSession } from './hooks/useDtrumEndSession';
-export { useDtrumListener } from './hooks/useDtrumListener';
-export { useDtrumOnMount } from './hooks/useDtrumOnMount';
+// Hooks
+import { useDtrumEndSession } from './hooks/useDtrumEndSession';
+import { useDtrumListener } from './hooks/useDtrumListener';
+import { useDtrumOnMount } from './hooks/useDtrumOnMount';
 
-export { dtrumEndSession } from './tools/dtrumEndSession';
-export { dtrumEnterActionListener } from './tools/dtrumEnterActionListener';
-export { sendDtrumAction } from './tools/sendDtrumAction';
+// Tools
+import { dtrumEndSession } from './tools/dtrumEndSession';
+import { dtrumEnterActionListener } from './tools/dtrumEnterActionListener';
+import { sendDtrumAction } from './tools/sendDtrumAction';
+
+// Utils
+import { recursiveAttrSearch } from "./utils/recursiveAttrSearch";
+
+const hooks = { useDtrumEndSession, useDtrumListener, useDtrumOnMount };
+const tools = { dtrumEndSession, dtrumEnterActionListener, sendDtrumAction };
+const utils = { recursiveAttrSearch };
+
+export default { hooks, tools, utils };
