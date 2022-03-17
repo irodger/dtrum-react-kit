@@ -1,17 +1,17 @@
 import { useEffect } from 'react';
-import { dtrumEnterActionListener } from '../tools/dtrumEnterActionListener';
+import { actionToGlobalListener } from '../listeners';
 
 /**
  * Dtrum action listener hook with the Listener
  * */
-export const useDtrumListener = () => {
+export const useDtrumListener = (listener = actionToGlobalListener) => {
   const { dtrum = undefined } = window;
 
   useEffect(() => {
     if (!dtrum) return;
 
-    dtrum.addEnterActionListener(dtrumEnterActionListener);
+    dtrum.addEnterActionListener(listener);
 
-    return () => dtrum.removeEnterActionListener(dtrumEnterActionListener);
+    return () => dtrum.removeEnterActionListener(listener);
   }, [dtrum]);
 };

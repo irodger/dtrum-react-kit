@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { sendDtrumAction } from "../tools/sendDtrumAction";
+import { sendDtrumAction } from "../tools";
 
 let memoizedMountNameValue = '';
 /** The hook fired when component in mounted

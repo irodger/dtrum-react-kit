@@ -1,18 +1,18 @@
-// Hooks
-import { useDtrumEndSession } from './hooks/useDtrumEndSession';
-import { useDtrumListener } from './hooks/useDtrumListener';
-import { useDtrumOnMount } from './hooks/useDtrumOnMount';
+/** Hooks */
+import { useDtrumListener, useDtrumOnMount, useDtrumEndSession } from './hooks';
 
-// Tools
-import { dtrumEndSession } from './tools/dtrumEndSession';
-import { dtrumEnterActionListener } from './tools/dtrumEnterActionListener';
-import { sendDtrumAction } from './tools/sendDtrumAction';
+/** Tools */
+import { dtrumEndSession, sendDtrumAction } from './tools';
 
-// Utils
-import { recursiveAttrSearch } from "./utils/recursiveAttrSearch";
+/** listeners */
+import { enterActionListener, actionToGlobalListener } from './listeners';
+
+/** Utils */
+import { recursiveAttrSearch } from "./utils";
 
 const hooks = { useDtrumEndSession, useDtrumListener, useDtrumOnMount };
-const tools = { dtrumEndSession, dtrumEnterActionListener, sendDtrumAction };
+const listeners = { enterActionListener, actionToGlobalListener };
+const tools = { dtrumEndSession, sendDtrumAction };
 const utils = { recursiveAttrSearch };
 
-export default { hooks, tools, utils };
+export default { hooks, tools, listeners, utils };

@@ -1,7 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.dtrumEnterActionListener = void 0;
-var recursiveAttrSearch_1 = require("../utils/recursiveAttrSearch");
+import { ActionEnterListener } from '@dynatrace/dtrum-api-types';
+import { recursiveAttrSearch } from '../utils';
+
 /**
  * Dtrum action listener -
  * Using deep search find the closest data-test-id and set to global variable `_dtrumElementId`
@@ -15,8 +14,12 @@ var recursiveAttrSearch_1 = require("../utils/recursiveAttrSearch");
  * @param { Boolean } _isRootAction - True if the action with the provided ID is a root action
  * @param { HTMLElement } element - DOM Element what called the action
  * */
-var dtrumEnterActionListener = function (_actionId, _startTimestamp, _isRootAction, element) {
-    //@ts-expect-error Global variable used in Dynatrace admin panel
-    window._dtrumElementId = element && (0, recursiveAttrSearch_1.recursiveAttrSearch)(element, 'data-test-id');
+export const actionToGlobalListener: ActionEnterListener = (
+  _actionId,
+  _startTimestamp,
+  _isRootAction,
+  element,
+): void => {
+  //@ts-expect-error Global variable used in Dynatrace admin panel
+  window._dtrumElementId = element && recursiveAttrSearch(element, 'data-test-id');
 };
-exports.dtrumEnterActionListener = dtrumEnterActionListener;

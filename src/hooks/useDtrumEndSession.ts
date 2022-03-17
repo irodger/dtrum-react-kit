@@ -1,15 +1,15 @@
 import { useEffect } from 'react';
-import { dtrumEndSession } from '../tools/dtrumEndSession';
+import { dtrumEndSession } from '../tools';
 
 /** Hooks will send endSession event when user closed current window */
-export const useDtrumEndSession = (): void => {
+export const useDtrumEndSession = (eventType = 'beforeunload'): void => {
   const { dtrum = undefined } = window;
 
   useEffect(() => {
-    if (!dtrum) return;
+    if (!dtrum || eventType === 'visibilitychange' && (document.visibilityState !== 'hidden' || !document.hidden)) return;
 
-    window.addEventListener('beforeunload', dtrumEndSession);
+    window.addEventListener(eventType, dtrumEndSession)
 
-    return () => window.removeEventListener('beforeunload', dtrumEndSession);
+    return () => window.removeEventListener(eventType, dtrumEndSession);
   }, [dtrum]);
 };

@@ -12,4 +12,4 @@ import { ActionEnterListener } from '@dynatrace/dtrum-api-types';
  * @param { Boolean } _isRootAction - True if the action with the provided ID is a root action
  * @param { HTMLElement } element - DOM Element what called the action
  * */
-export declare const dtrumEnterActionListener: ActionEnterListener;
+export declare const enterActionListener: ActionEnterListener;

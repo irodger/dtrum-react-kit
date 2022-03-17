@@ -1,0 +1,1 @@
+export { recursiveAttrSearch } from './recursiveAttrSearch';

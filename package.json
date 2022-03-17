@@ -1,7 +1,9 @@
 {
   "name": "dtrum-react-kit",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Dynatrace tools and react hooks collection",
+  "repository": "github.com:irodger/dtrum-react-kit",
+  "bugs": "github.com:irodger/dtrum-react-kit/issues",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
